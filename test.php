@@ -11,6 +11,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-latest.js" type="text/javascript"></script>
     <title>BtrpsForm class test</title>
   </head>
   <body>
