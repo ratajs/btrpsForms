@@ -10,8 +10,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/bootstrap/bootstrap/css/bootstrap.css">
-    <title>Test třídy BtrpsForm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>BtrpsForm class test</title>
   </head>
   <body>
     <?php
