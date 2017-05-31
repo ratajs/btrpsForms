@@ -1,6 +1,6 @@
 ﻿<?php
   include "./forms.php";
-  $form = new BtrpsForm("Odeslat údaje");
+  $form = new BtrpsForm("Send it!");
   $form->addField("fieldName", "Field", "email", NULL, "flag", "E-mail");
   $form->addField("fieldName2", "Radio", "radio", ['key1' => "Value1", 'key2' => "Value2"], "flag", "Radio");
   $form->addField("fieldName3", "Select", "select", ['key1' => "Value1", 'key2' => "Value2"], "flag", "Select");
