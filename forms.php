@@ -2,7 +2,7 @@
   class BtrpsForm
   {
     private $fields = [];
-    private $submitText = "Odeslat";
+    private $submitText = "Send";
     public function __construct($sText = "Odeslat") {
       $this->submitText = $sText;
     }
