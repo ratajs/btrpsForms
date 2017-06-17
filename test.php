@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   include "./forms.php";
   $form = new BtrpsForm("Send it!");
   $form->addField("fieldName", "Field", "email", NULL, "flag", "E-mail");
@@ -15,8 +15,6 @@
     <title>BtrpsForm class test</title>
   </head>
   <body>
-    <?php
-      print $form;
-    ?>
+    <?=$form ?>
   </body>
 </html>
