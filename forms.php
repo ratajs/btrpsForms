@@ -74,7 +74,7 @@
         {
           $r.= '
             <div class="input-group">
-              <span class="input-group-addon glyphicon glyphicon-' . $i . '" onClick="$(\'#input' . $k . '\').focus()" style="top: 0"></span>
+              <span class="input-group-addon glyphicon glyphicon-' . $i . '" onClick="$(\'#input' . $k . '\').focus()" style="top: 0; cursor: pointer;"></span>
               <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" class="form-control col-sm-10" id="input' . $k . '"' . ($k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
             ';
         };
