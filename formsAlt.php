@@ -3,6 +3,7 @@
   {
     private $fields = [];
     private $submitText = "Send";
+    private static $k = 0;
     public function __construct($sText = "Send") {
       $this->submitText = $sText;
     }
@@ -24,7 +25,7 @@
         $req = $v->required;
         $r.= '
           <div class="form-group row">
-            <label for="input' . $k . '" class="control-label col-2"' . (in_array($t, ["radio", "select"]) ? NULL : ' style="cursor: pointer"') . '>' . $l . '</label>';
+            <label for="input' . self::$k . '" class="control-label col-2"' . (in_array($t, ["radio", "select"]) ? NULL : ' style="cursor: pointer"') . '>' . $l . '</label>';
         if(in_array($t, ["radio", "select"]))
         {
           if(!is_array($val))
@@ -77,7 +78,7 @@
         } else
         {
           $r.= '
-            <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" class="form-control col-10" id="input' . $k . '"' . ($k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
+            <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" class="form-control col-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
           </div>
             ';
         };
@@ -90,6 +91,7 @@
             </div>
           </div>';
         }
+        self::$k++;
       };
       return $r . "\n</form>\n";
     }
