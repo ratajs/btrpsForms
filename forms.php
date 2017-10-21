@@ -1,9 +1,10 @@
-﻿<?php
+<?php
   class BtrpsForm
   {
     private $fields = [];
     private $submitText = "Send";
-    public function __construct($sText = "Odeslat") {
+    private static $k = 0;
+    public function __construct($sText = "Send") {
       $this->submitText = $sText;
     }
     public function addField($name, $label, $type = "text", $val = NULL, $icon = "user", $placeholder = NULL, $required = false)
@@ -25,7 +26,7 @@
         $req = $v->required;
         $r.= '
           <div class="form-group row">
-            <label for="input' . $k . '" class="control-label col-sm-2"' . (in_array($t, ["radio", "select"]) ? NULL : ' style="cursor: pointer"') . '>' . $l . '</label>';
+            <label for="input' . self::$k . '" class="control-label col-sm-2"' . (in_array($t, ["radio", "select"]) ? NULL : ' style="cursor: pointer"') . '>' . $l . '</label>';
         if(in_array($t, ["radio", "select"]))
         {
           if(!is_array($val))
@@ -74,8 +75,8 @@
         {
           $r.= '
             <div class="input-group">
-              <span class="input-group-addon glyphicon glyphicon-' . $i . '" onClick="$(\'#input' . $k . '\').focus()" style="top: 0; cursor: pointer;"></span>
-              <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" class="form-control col-sm-10" id="input' . $k . '"' . ($k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
+              <span class="input-group-addon glyphicon glyphicon-' . $i . '" onClick="$(\'#input' . self::$k . '\').focus()" style="top: 0; cursor: pointer;"></span>
+              <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" class="form-control col-sm-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
             ';
         };
         if($k==count((array) $this->fields)-1)
@@ -85,6 +86,7 @@
                 </span>';
         }
         $r.= "</div></div>";
+        self::$k++;
       };
       return $r . "</form>";
     }
