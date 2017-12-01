@@ -7,7 +7,7 @@
     public function __construct($sText = "Send") {
       $this->submitText = $sText;
     }
-    public function addField($name, $label, $type = "text", $val = NULL, $icon = "user", $placeholder = NULL, $required = false)
+    public function addField($name, $label, $type = "text", $val = NULL, $icon = "user", $placeholder = NULL, $required = false, $autocomplete = true)
     {
       $this->fields[] = (object) ['name' => $name, 'label' => $label, 'type' => $type, 'val' => $val, 'icon' => $icon, 'placeholder' => $placeholder, 'required' => $required];
       return true;
@@ -76,7 +76,7 @@
           $r.= '
             <div class="input-group">
               <span class="input-group-addon glyphicon glyphicon-' . $i . '" onClick="$(\'#input' . self::$k . '\').focus()" style="top: 0; cursor: pointer;"></span>
-              <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" class="form-control col-sm-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
+              <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" autocomplete="' . $autocomplete ? "on" : "off" . '" class="form-control col-sm-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
             ';
         };
         if($k==count((array) $this->fields)-1)
