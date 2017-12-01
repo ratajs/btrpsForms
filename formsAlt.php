@@ -78,7 +78,7 @@
         } else
         {
           $r.= '
-            <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" class="form-control col-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
+            <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" autocomplete="' . ($autocomplete ? "on" : "off") . '" class="form-control col-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
           </div>
             ';
         };
@@ -161,7 +161,7 @@
         } else
         {
           $r.= '
-            <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" autocomplete="' . $autocomplete ? "on" : "off" . '" class="form-control col-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
+            <input type="' . $t . '" name="' . $n . '" value="' . $val . '" placeholder="' . $p . '" autocomplete="' . ($autocomplete ? "on" : "off") . '" class="form-control col-10" id="input' . self::$k . '"' . (self::$k==0 ? ' autofocus' : NULL) . ($req ? ' required' : NULL) . '>
           </div>
             ';
         };
