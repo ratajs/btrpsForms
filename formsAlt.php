@@ -23,6 +23,7 @@
         $val = $v->val;
         $p = $v->placeholder;
         $req = $v->required;
+        $autocomplete = $v->autocomplete;
         $r.= '
           <div class="form-group row">
             <label for="input' . self::$k . '" class="control-label col-2"' . (in_array($t, ["radio", "select"]) ? NULL : ' style="cursor: pointer"') . '>' . $l . '</label>';
