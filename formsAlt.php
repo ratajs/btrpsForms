@@ -9,7 +9,7 @@
     }
     public function addField($name, $label, $type = "text", $val = NULL, $placeholder = NULL, $required = false, $autocomplete = true)
     {
-      $this->fields[] = (object) ['name' => $name, 'label' => $label, 'type' => $type, 'val' => $val, 'placeholder' => $placeholder, 'required' => $required];
+      $this->fields[] = (object) ['name' => $name, 'label' => $label, 'type' => $type, 'val' => $val, 'placeholder' => $placeholder, 'required' => $required, 'autocomplete' => $autocomplete];
       return true;
     }
     public function __toString()
