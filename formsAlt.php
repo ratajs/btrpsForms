@@ -49,16 +49,14 @@
                 {
                    $r.= '
                 <div class="form-group row">
-                  <div class="col-xs-12 offset-2 col-10">
-                    <input type="submit" value="' . $this->submitText . '" class="btn btn-secondary">
-                  </div>
+                  <input type="submit" value="' . $this->submitText . '" class="btn btn-outline-secondary offset-2">
                 </div>';
                 };
               };
             };
           } else
           {
-            $r.= '<select name="' . $n . '" class="form-control">';
+            $r.= '<select name="' . $n . '" class="form-control col-10">';
             foreach($val as $k2 => $v2)
             {
               $r.= '
@@ -70,9 +68,7 @@
             {
               $r.= '</div>
                 <div class="form-group row">
-                  <div class="col-xs-12 offset-2 col-10">
-                    <input type="submit" value="' . $this->submitText . '" class="btn btn-secondary">
-                  </div>
+                  <input type="submit" value="' . $this->submitText . '" class="btn btn-outline-secondary offset-2">
                 </div>';
             }
           };
@@ -87,9 +83,7 @@
         {
           $r.= '
           <div class="form-group row">
-            <div class="col-xs-12 offset-2 col-10">
-              <input type="submit" value="' . $this->submitText . '" class="btn btn-secondary">
-            </div>
+            <input type="submit" value="' . $this->submitText . '" class="btn btn-outline-secondary offset-2">
           </div>';
         }
         self::$k++;
@@ -129,20 +123,11 @@
               {
                 $r.= '
                   <div class="radio offset-2 col-10"><label><input type="radio" name="' . $n . '" value="' . $k2 . '"> ' . $v2 . '</label></div></div>';
-                if($k==count((array) $this->fields)-1)
-                {
-                   $r.= '
-                <div class="form-group row">
-                  <div class="col-xs-12 offset-2 col-10">
-                    <input type="submit" value="' . $this->submitText . '" class="btn btn-secondary">
-                  </div>
-                </div>';
-                };
               };
             };
           } else
           {
-            $r.= '<select name="' . $n . '" class="form-control">';
+            $r.= '<select name="' . $n . '" class="form-control col-10">';
             foreach($val as $k2 => $v2)
             {
               $r.= '
@@ -150,15 +135,6 @@
               ';
             };
             $r.= "</select></div>";
-            if($k==count((array) $this->fields)-1)
-            {
-              $r.= '</div>
-                <div class="form-group row">
-                  <div class="col-xs-12 offset-2 col-10">
-                    <input type="submit" value="' . $this->submitText . '" class="btn btn-secondary">
-                  </div>
-                </div>';
-            }
           };
         } else
         {
@@ -171,9 +147,7 @@
         {
           $r.= '
           <div class="form-group row">
-            <div class="col-xs-12 offset-2 col-10">
-              <input type="submit" value="' . $this->submitText . '" class="btn btn-secondary">
-            </div>
+            <input type="submit" value="' . $this->submitText . '" class="btn btn-outline-secondary offset-2">
           </div>';
         }
         self::$k++;
